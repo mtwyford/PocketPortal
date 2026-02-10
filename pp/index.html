@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Progressive Web App starter template">
+    <meta name="theme-color" content="#2196F3">
+    
+    <title>My PWA Starter</title>
+    
+    <!-- Link to manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple touch icon (for iOS) -->
+    <link rel="apple-touch-icon" href="icon-192.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-box h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #counter-display {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .install-prompt {
+            background: rgba(76, 175, 80, 0.3);
+            border: 2px solid rgba(76, 175, 80, 0.6);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .install-prompt.show {
+            display: block;
+        }
+
+        .status {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚀</div>
+        <h1>My PWA Starter</h1>
+        <p class="subtitle">A simple Progressive Web App template</p>
+
+        <!-- Install prompt -->
+        <div id="install-prompt" class="install-prompt">
+            <p>📱 Install this app on your phone for a better experience!</p>
+            <button id="install-button">Install App</button>
+        </div>
+
+        <!-- Demo counter feature -->
+        <div class="feature-box">
+            <h2>Counter Demo</h2>
+            <div id="counter-display">0</div>
+            <button id="increment-btn">+ Increment</button>
+            <button id="decrement-btn">- Decrement</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <!-- Status indicator -->
+        <div class="status">
+            <p id="online-status">🟢 Online</p>
+            <p id="pwa-status">PWA Status: <span id="install-status">Not Installed</span></p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="feature-box">
+            <h2>How to Install</h2>
+            <p><strong>On iPhone:</strong> Tap Share → Add to Home Screen</p>
+            <p><strong>On Android:</strong> Tap menu (⋮) → Install app / Add to Home Screen</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
