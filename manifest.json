@@ -1,8 +1,8 @@
 {
-  "name": "My PWA Starter",
-  "short_name": "PWA Starter",
-  "description": "A simple Progressive Web App starter template",
-  "start_url": "/pp",
+  "name": "MLT Start",
+  "short_name": "MLT",
+  "description": "A simple Web App starter template for Pocket Portal",
+  "start_url": "/pp/",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#2196F3",
